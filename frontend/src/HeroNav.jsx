@@ -71,7 +71,7 @@ const HeroNav = () => {
       {/* Mobile Menu - visible on small screens */}
       {isMobileMenuOpen && (
         <motion.div
-          className="flex flex-col items-center tst:hidden bg-white p-4 rounded-lg shadow-lg space-y-4"
+          className="flex flex-col items-center md:hidden bg-white p-4 rounded-lg shadow-lg space-y-4"
           initial="hidden"
           animate="visible"
         >
