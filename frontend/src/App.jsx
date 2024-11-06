@@ -7,6 +7,7 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SmartHomeDashboard from './SmartHomeDashboard';
 import AnalyticsDashboard from './AnalyticsDashboard';
+import Faq from './pages/faqsec';
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/login" element={<Login/>} />
       <Route path="/dashboard" element={<SmartHomeDashboard/>} />
       <Route path="/dashboard/analytics" element={<AnalyticsDashboard/>} />
+      <Route path='/faq' element={<Faq />} />
     </Routes>
       
   );
