@@ -1,34 +1,36 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { 
-  Bell, 
-  Search, 
-  Settings, 
-  Plus, 
-  ThermometerSun, 
-  Droplets, 
-  Wifi, 
-  Wind, 
-  Lightbulb,
-  LayoutDashboard,
+import {
   BarChart2,
+  Bell,
+  Droplets,
   Home,
+  LayoutDashboard,
+  Lightbulb,
+  Plus,
+  Search,
+  Settings,
+  ThermometerSun,
+  Wifi,
+  Wind,
   X
 } from 'lucide-react';
-import TemperatureControlCard from './TemperatureControl';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+// Card component
 const Card = ({ children, className = '', onClick }) => (
   <div className={`bg-white rounded-lg shadow ${className}`} onClick={onClick}>
     {children}
   </div>
 );
 
+// Card content component
 const CardContent = ({ children, className = '' }) => (
   <div className={`p-4 ${className}`}>
     {children}
   </div>
 );
 
+// Device icon component
 const DeviceIcon = ({ type, className }) => {
   const icons = {
     'Humidity': Droplets,
@@ -37,11 +39,12 @@ const DeviceIcon = ({ type, className }) => {
     'Lights': Lightbulb,
     'Wi-fi': Wifi
   };
-  
+
   const IconComponent = icons[type];
   return IconComponent ? <IconComponent className={className} /> : null;
 };
 
+// Modal for adding new devices
 const Modal = ({ isOpen, onClose, onSubmit }) => {
   const [deviceName, setDeviceName] = useState('');
   const [deviceType, setDeviceType] = useState('Humidity');
@@ -107,9 +110,10 @@ const Modal = ({ isOpen, onClose, onSubmit }) => {
   );
 };
 
+// Sidebar component
 const Sidebar = () => {
   const navigate = useNavigate();
-  
+
   const menuItems = [
     { icon: LayoutDashboard, label: 'Dashboard', href: '/dashboard' },
     { icon: BarChart2, label: 'Analytics', href: '/analytics' },
@@ -166,6 +170,7 @@ const Sidebar = () => {
   );
 };
 
+// Main dashboard component
 const SmartHomeDashboard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [devices, setDevices] = useState([
@@ -232,93 +237,77 @@ const SmartHomeDashboard = () => {
               <Settings className="h-6 w-6 text-gray-600" />
               <div className="relative">
                 <Bell className="h-6 w-6 text-gray-600" />
-                <span className="absolute -top-1 -right-1 h-4 w-4 bg-green-700 rounded-full text-white text-xs flex items-center justify-center">
-                  2
-                </span>
+                <span className="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-500" />
               </div>
             </div>
           </header>
 
-          <main className="p-6 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {stats.map((stat) => (
-                <Card key={stat.label}>
+          <div className="p-4 space-y-6">
+            <div className="grid grid-cols-4 gap-4">
+              {stats.map((stat, index) => (
+                <Card key={index} className="text-center">
                   <CardContent>
-                    <div className="text-3xl font-bold text-green-700">
+                    <h2 className="text-4xl font-bold">
                       {stat.value}
-                      <span className="text-lg">{stat.unit}</span>
-                    </div>
-                    <div className="text-gray-600">{stat.label}</div>
-                    <div className="text-sm text-gray-400">{stat.sublabel}</div>
+                      <span className="text-2xl text-gray-400">{stat.unit}</span>
+                    </h2>
+                    <p className="text-gray-700">{stat.label}</p>
+                    <p className="text-sm text-gray-500">{stat.sublabel}</p>
                   </CardContent>
                 </Card>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <TemperatureControlCard/>
-
-              <Card>
-                <CardContent>
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-semibold">Consumption by room</h3>
-                    <button className="text-gray-400">
-                      <Settings className="h-5 w-5" />
-                    </button>
-                  </div>
-                  <div className="space-y-2">
-                    {roomConsumption.map((room) => (
-                      <div key={room.room} className="flex items-center justify-between">
-                        <span className="text-sm text-gray-600">{room.room}</span>
-                        <span className="text-sm text-gray-400">{room.percentage}%</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="flex justify-between items-center">
+              <h2 className="text-lg font-semibold">Connected Devices</h2>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+              >
+                <Plus className="h-5 w-5 mr-1" />
+                Add Device
+              </button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+            <div className="grid grid-cols-3 gap-4">
               {devices.map((device, index) => (
-                <Card 
-                  key={`${device.name}-${index}`} 
-                  className={`cursor-pointer transition-colors duration-200 ${
-                    device.status === 'on' ? 'bg-green-700 text-white' : ''
+                <Card
+                  key={index}
+                  className={`text-center cursor-pointer transition-colors duration-200 ${
+                    device.status === 'on' 
+                      ? 'bg-green-100 border-2 border-green-500' 
+                      : 'border-2 border-gray-300'
                   }`}
                   onClick={() => toggleDevice(index)}
                 >
                   <CardContent>
-                    <DeviceIcon 
-                      type={device.type} 
-                      className={`h-6 w-6 ${device.status === 'on' ? 'text-white' : 'text-gray-600'}`} 
-                    />
-                    <div className={`mt-2 text-sm ${device.status === 'on' ? 'text-white' : 'text-gray-600'}`}>
-                      {device.name}
-                    </div>
-                    <div className={`text-xs ${device.status === 'on' ? 'text-white/80' : 'text-gray-400'}`}>
-                      {device.lastActive}
-                    </div>
+                    <DeviceIcon type={device.type} className="h-10 w-10 mx-auto" />
+                    <h3 className="mt-2 text-xl font-bold">{device.name}</h3>
+                    <p className="text-gray-500">{device.lastActive}</p>
                   </CardContent>
                 </Card>
               ))}
-              <Card 
-                className="border-2 border-dashed cursor-pointer hover:border-green-500"
-                onClick={() => setIsModalOpen(true)}
-              >
-                <CardContent className="flex flex-col items-center justify-center">
-                  <Plus className="h-6 w-6 text-gray-400" />
-                  <span className="mt-2 text-sm text-gray-600">New device</span>
-                </CardContent>
-              </Card>
             </div>
-          </main>
+
+            <div className="p-4 bg-white rounded-lg shadow">
+              <h2 className="text-lg font-semibold">Room Energy Consumption</h2>
+              <div className="space-y-2 mt-2">
+                {roomConsumption.map((room, index) => (
+                  <div key={index} className="flex items-center justify-between">
+                    <span>{room.room}</span>
+                    <div className="flex items-center w-2/3">
+                      <div className="bg-green-500 h-2 rounded-full" style={{ width: `${room.percentage}%` }} />
+                      <span className="ml-2 text-sm text-gray-500">{room.percentage}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <Modal 
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        onSubmit={handleAddDevice}
-      />
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} onSubmit={handleAddDevice} />
     </div>
   );
 };
