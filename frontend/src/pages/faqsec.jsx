@@ -2,11 +2,13 @@ import { useState } from "react";
 import data from "..//assets/faqdata.json";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import HeroNav from "../HeroNav";
+import { useNavigate } from "react-router-dom";
 
 export default function Faq() {
 
     const [current,setcurrent] = useState("PRODUCT");
     const [act,setact] = useState(null);
+    const navigate = useNavigate();
 
     function toggleindex(id)
     {
@@ -57,7 +59,8 @@ export default function Faq() {
 
           <div className="container font-Arima font-semibold tracking-wider text-center">
             <h1 className="text-[25px] mb-3">HAVE SOMETHING NOT BEING ADDRESSED?</h1>
-            <button className="md:max-w-[30%] text-1xl text-white bg-[#87553B] p-3 rounded-md mx-auto mb-10 hover:text-sm hover:rounded-xl">CONTACT US</button>
+            <button className="md:max-w-[30%] text-1xl text-white bg-[#87553B] p-3 rounded-md mx-auto mb-10 hover:text-sm hover:rounded-xl"
+                    onClick={()=>{navigate("/contactUs")}}>CONTACT US</button>
           </div>
         </div>
       </div>

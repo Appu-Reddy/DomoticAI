@@ -64,14 +64,12 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SmartHomeDashboard from './SmartHomeDashboard';
 import AnalyticsDashboard from './AnalyticsDashboard';
-<<<<<<< HEAD
-import Faq from './pages/faqsec';
-
-
-=======
 import { Navigate } from 'react-router-dom';
-// import Dashboard from './Dashboard';
->>>>>>> edb45654984f80c0bc1652b2b7227ce85238b04d
+import Contact_us from './pages/Contact_us';
+import Feature_control from './pages/Feature_control';
+import Faq from './pages/faqsec';
+import About_us_main from './pages/Aboutus/About_us_main';
+
 
 const App = () => {
 
@@ -88,15 +86,12 @@ const App = () => {
       <Route path="/" element={<Hero/>} />
       <Route path="/pricing" element={<Pricing/>} />
       <Route path="/register" element={<Signup/>} />
-      {/* <Route path="/dashboardd" element={<Dashboard/>} /> */}
-      {/* <Route path="/login" element={<Login/>} /> */}
-      <Route path="/login" element={<Login onLogin={handleLogin} />} />
-      {/* <Route path="/dashboard" element={<SmartHomeDashboard/>} /> */}
-      <Route
-        path="/dashboard"
-        element={isAuthenticated ? <SmartHomeDashboard/> : <Navigate to="/login" />}
-      />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/dashboard" element={<SmartHomeDashboard/>} />
       <Route path="/dashboard/analytics" element={<AnalyticsDashboard/>} />
+      <Route path='/features' element={<Feature_control />}></Route>
+      <Route path='/contactUs' element={<Contact_us />}></Route>
+      <Route path='/about' element={<About_us_main />}></Route>
       <Route path='/faq' element={<Faq />} />
     </Routes>
       
