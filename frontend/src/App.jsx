@@ -64,21 +64,15 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import SmartHomeDashboard from './SmartHomeDashboard';
 import AnalyticsDashboard from './AnalyticsDashboard';
-<<<<<<< HEAD
+import Faq from './pages/faqsec';
+
+
+
 import { Navigate } from 'react-router-dom';
-import Contact_us from './pages/Contact_us';
 import Feature_control from './pages/Feature_control';
-import Faq from './pages/faqsec';
+import Contact_us from './pages/Contact_us';
 import About_us_main from './pages/Aboutus/About_us_main';
-=======
-
-import Faq from './pages/faqsec';
-
-
-
-import { Navigate } from 'react-router-dom';
 // import Dashboard from './Dashboard';
->>>>>>> 11566344ee2a570f906faad910d02e0a0c25277c
 
 
 const App = () => {
