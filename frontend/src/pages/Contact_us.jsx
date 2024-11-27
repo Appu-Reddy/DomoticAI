@@ -90,4 +90,4 @@ function Contact_us(props) {
         </div>
     )
 }
-export default Contact_us
+export default Contact_us;

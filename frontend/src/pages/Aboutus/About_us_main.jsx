@@ -37,4 +37,4 @@ function About_us_main() {
   )
 }
 
-export default About_us_main
+export default About_us_main;
