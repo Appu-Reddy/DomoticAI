@@ -1,0 +1,102 @@
+*   [33m54165fc52[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[31m|[m[32m\[m  
+[31m|[m *   [33m941a37ae2[m Changes
+[31m|[m [33m|[m[34m\[m  
+[31m|[m [33m|[m * [33m616106053[m Added git ignore file in frontend
+[31m|[m * [34m|[m [33mb774c65d0[m Changes
+[31m|[m [34m|[m[34m/[m  
+[31m|[m *   [33m78297f771[m Changes
+[31m|[m [35m|[m[36m\[m  
+[31m|[m * [36m|[m [33m84fb9ba75[m changes
+* [36m|[m [36m|[m [33mc8f9e98a7[m hardware
+* [36m|[m [36m|[m [33m9148ca439[m extra features added
+* [36m|[m [36m|[m   [33m9949ef403[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[1;31m|[m[36m\[m [36m\[m [36m\[m  
+[1;31m|[m [36m|[m [36m|[m[36m/[m  
+[1;31m|[m [36m|[m[36m/[m[36m|[m   
+[1;31m|[m * [36m|[m [33m11566344e[m new ui
+[1;31m|[m [1;33m|[m[36m\[m[36m|[m 
+[1;31m|[m * [36m|[m [33m92c78c572[m idk
+* [1;34m|[m [36m|[m   [33m3849fe4a4[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[1;35m|[m[36m\[m [1;34m\[m [36m\[m  
+[1;35m|[m [36m|[m [1;34m|[m[36m/[m  
+[1;35m|[m [36m|[m[36m/[m[1;34m|[m   
+[1;35m|[m * [1;34m|[m [33m332ef51bc[m changes
+[1;35m|[m [31m|[m[1;34m\[m[1;34m|[m 
+[1;35m|[m * [1;34m|[m [33m86cdfa88d[m changes
+[1;35m|[m * [1;34m|[m [33m44c15b2f7[m Resolved merge conflict in Signup.jsx
+* [32m|[m [1;34m|[m   [33m4ceae9261[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[33m|[m[34m\[m [32m\[m [1;34m\[m  
+[33m|[m * [32m\[m [1;34m\[m   [33m0954661b5[m Merge branch 'pavithrakumar22:main' into main
+[33m|[m [35m|[m[1;34m\[m [32m\[m [1;34m\[m  
+[33m|[m [35m|[m [1;34m|[m [32m|[m[1;34m/[m  
+[33m|[m [35m|[m [1;34m|[m[1;34m/[m[32m|[m   
+[33m|[m [35m|[m * [32m|[m [33m5558b6a32[m Faq section added (#6)
+* [35m|[m [36m|[m [32m|[m [33m9a7d18d8b[m Features added
+[35m|[m[35m/[m [36m/[m [32m/[m  
+* [36m|[m [32m|[m [33m78a611184[m Dashboard updated
+[1;31m|[m[36m\[m[36m|[m [32m|[m 
+[1;31m|[m * [32m|[m [33medb456549[m fixed hero page bug
+[1;31m|[m * [32m|[m [33mb0a63831c[m Changes in dashboard and functionlity
+[1;31m|[m * [32m|[m [33m75facefc3[m Changes in dashboard and functionlity
+[1;31m|[m [1;33m|[m[32m\[m[32m|[m 
+[1;31m|[m * [32m|[m [33m852ec121a[m Changes in dashboard and functionlity
+* [1;34m|[m [32m|[m   [33m4d2915852[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[1;35m|[m[32m\[m [1;34m\[m [32m\[m  
+[1;35m|[m [32m|[m [1;34m|[m[32m/[m  
+[1;35m|[m [32m|[m[32m/[m[1;34m|[m   
+[1;35m|[m * [1;34m|[m [33m016b663e8[m fixed analytics bug
+[1;35m|[m [1;34m|[m[1;34m/[m  
+* [1;34m|[m [33m381054086[m modified:   frontend/src/HeroNav.jsx
+* [1;34m|[m [33m87287b648[m Merge branch 'main' of https://github.com/Appu-Reddy/DomoticAI
+[31m|[m[1;34m\[m[1;34m|[m 
+[31m|[m * [33m171b58812[m changes in dashboard
+[31m|[m *   [33m555dba193[m handled commit error and dashboard updated
+[31m|[m [33m|[m[34m\[m  
+[31m|[m * [34m|[m [33m1a58683e9[m Dashboard updated
+* [34m|[m [34m|[m [33mf587f0f89[m FAQ section Added
+[34m|[m [34m|[m[34m/[m  
+[34m|[m[34m/[m[34m|[m   
+* [34m|[m [33ma1430b36a[m Changes in dashboard
+[34m|[m[34m/[m  
+*   [33m7273c66e4[m xtz
+[35m|[m[36m\[m  
+[35m|[m * [33m566999cd9[m Changes in project structure
+[35m|[m * [33m17fe75eb4[m Changes
+* [36m|[m [33m4c8d24ccd[m dashboard
+[36m|[m[36m/[m  
+*   [33m703287edc[m Merge pull request #2 from Greeshma855/main
+[1;31m|[m[1;32m\[m  
+[1;31m|[m * [33m16ba6c72a[m Create README.md
+* [1;32m|[m [33m6f3855c52[m Merge branch 'main' of https://github.com/pavithrakumar22/DomoticAI
+[1;33m|[m[1;32m\[m[1;32m|[m 
+[1;33m|[m *   [33ma5d98fe11[m Changes in dashboard
+[1;33m|[m [1;35m|[m[1;36m\[m  
+[1;33m|[m * [1;36m|[m [33m97680f287[m Change in project structure
+* [1;36m|[m [1;36m|[m [33m816c2e8fa[m removed room preview
+[1;36m|[m [1;36m|[m[1;36m/[m  
+[1;36m|[m[1;36m/[m[1;36m|[m   
+* [1;36m|[m [33m55f3648f1[m modified dashboard theme and created analytics component
+* [1;36m|[m [33m89550117d[m added dashboard template
+[1;36m|[m[1;36m/[m  
+* [33m6f6fefff8[m Fixed get started bug
+*   [33m4bd1a120e[m Changes NavBar
+[31m|[m[32m\[m  
+[31m|[m * [33mb5c2f5244[m resolved login page bug
+[31m|[m *   [33m43e5f5b1f[m duration changes in animations
+[31m|[m [33m|[m[34m\[m  
+[31m|[m * [34m|[m [33mffc2992c3[m added changes in animations
+* [34m|[m [34m|[m [33mf59593f12[m Changed NavBar
+[34m|[m [34m|[m[34m/[m  
+[34m|[m[34m/[m[34m|[m   
+* [34m|[m [33m4763701c2[m Adding nav to other pages
+* [34m|[m [33mcbef9067b[m Minor changes in login and signup
+* [34m|[m [33meeeb18b29[m Clickable logo in signup page
+* [34m|[m [33m36524f61c[m Added proper redirecting
+* [34m|[m [33m2e6e247da[m Added Backend and made necessary changes in the Frontend
+[34m|[m[34m/[m  
+* [33m7654839fd[m add signup
+* [33mebdd97cb0[m add node-modules
+* [33m0f6c9af7a[m 404 added
+* [33mfc70f0671[m add describing section
+* [33me8fb2e63d[m add commit
