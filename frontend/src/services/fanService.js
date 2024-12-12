@@ -46,7 +46,7 @@
 
 
 
-const ESP32_API_BASE_URL = "http://172.168.0.111"; // Replace with your ESP32's IP address
+const ESP32_API_BASE_URL = "http://172.168.0.80"; // Replace with your ESP32's IP address
 
 export const fanService = {
   async toggleFan(state) {
